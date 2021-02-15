@@ -14,7 +14,6 @@ public class AntiAim extends Module {
         super("AntiAim", Category.FUN);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
     private float KeepYaw;
 
     @SubscribeEvent

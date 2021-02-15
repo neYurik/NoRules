@@ -20,8 +20,6 @@ public class Keystrokes extends Module {
         Main.settingsManager.rSetting(new Setting("Mouse", this, false));
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.RenderTickEvent event)
     {

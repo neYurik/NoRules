@@ -11,8 +11,6 @@ public class Criticals extends Module {
         super("Criticals", Category.COMBAT);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)
     {

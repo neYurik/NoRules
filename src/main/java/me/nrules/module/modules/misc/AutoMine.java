@@ -13,8 +13,6 @@ public class AutoMine extends Module {
         super("AutoMine", Category.PLAYER);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)
     {

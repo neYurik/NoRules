@@ -25,25 +25,19 @@ public class AimBot extends Module
         Main.settingsManager.rSetting(new Setting("Range", this, 3.67, 0, 5, false));
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
-    public void AimBot(TickEvent.ClientTickEvent event)
+    public void onTick(TickEvent.ClientTickEvent event)
     {
         if(mc.player == null && mc.world == null)
             return;
 
-        for (Iterator<Entity> entities = mc.world.loadedEntityList.iterator(); entities.hasNext(); )
-        {
-            Object theObject = entities.next();
-            if (theObject instanceof EntityLivingBase)
-            {
+        for (Object theObject : mc.world.loadedEntityList) {
+            if (theObject instanceof EntityLivingBase) {
                 EntityLivingBase entity = (EntityLivingBase) theObject;
                 if (entity instanceof EntityPlayerSP) continue;
 
-                if (mc.player.getDistance(entity) <= Main.settingsManager.getSettingByName("Range").getValDouble() && !entity.isDead && !FriendManager.isFriend(entity.getName()))
-                {
-                        faceEntity(entity);
+                if (mc.player.getDistance(entity) <= Main.settingsManager.getSettingByName("Range").getValDouble() && !entity.isDead && !FriendManager.isFriend(entity.getName())) {
+                    faceEntity(entity);
                 }
             }
 

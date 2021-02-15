@@ -14,8 +14,6 @@ public class MClickFriend extends Module {
         super("MClickFriend", Category.MISC);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)
     {

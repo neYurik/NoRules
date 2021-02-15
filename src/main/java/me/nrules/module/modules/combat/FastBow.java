@@ -21,8 +21,6 @@ public class FastBow extends Module {
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)
     {
-        final Minecraft mc = Minecraft.getMinecraft();
-
         if (mc.player == null && mc.world == null)
             return;
 

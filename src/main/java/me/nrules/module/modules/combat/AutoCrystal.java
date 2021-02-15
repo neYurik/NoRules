@@ -13,8 +13,6 @@ public class AutoCrystal extends Module {
         super("AutoCrystal", Category.COMBAT);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)
     {

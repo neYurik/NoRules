@@ -16,7 +16,6 @@ public class AutoTotems extends Module {
         Main.settingsManager.rSetting(new Setting("Health", this, 10, 1, 20, true));
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
     int totems;
     boolean moving = false;
     boolean returnI = false;

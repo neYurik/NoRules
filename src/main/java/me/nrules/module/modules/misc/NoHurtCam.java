@@ -13,8 +13,6 @@ NoHurtCam extends Module {
         super("NoHurtCam", Category.MISC);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.RenderTickEvent event)
     {

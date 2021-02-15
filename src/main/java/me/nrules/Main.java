@@ -49,7 +49,7 @@ public class Main {
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event) throws IOException {
+    public void init(FMLInitializationEvent event) {
        // main();
         settingsManager = new SettingsManager();
         moduleManager = new ModuleManager();

@@ -11,8 +11,6 @@ public class Step extends Module {
         super("Step", Category.MOVEMENT);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)
     {

@@ -24,9 +24,9 @@ public class ElytraFly extends Module {
 
         if (mc.player.isElytraFlying()) {
             float f = MotionUtils.getDirection();
-            mc.player.motionX -= (double) (MathHelper.sin(f) * 0.0069F);
+            mc.player.motionX -= (MathHelper.sin(f) * 0.0069F);
             mc.player.motionY *= 0.0F;
-            mc.player.motionZ += (double) (MathHelper.cos(f) * 0.0069F);
+            mc.player.motionZ += (MathHelper.cos(f) * 0.0069F);
 
             if (Keyboard.isKeyDown(Keyboard.KEY_SPACE)) {
                 mc.player.motionY += 0.3F;

@@ -16,6 +16,7 @@ public class Module {
     private long lastEnableTime;
     private long lastDisableTime;
 
+    public static final Minecraft mc = Minecraft.getMinecraft();
 
     public Module(String name, Category category) {
         super();
@@ -54,7 +55,7 @@ public class Module {
 
     public double offset()
     {
-        return (double)Math.abs(MathHelper.clamp((float)(Minecraft.getSystemTime() - (this.toggled ? this.lastEnableTime : this.lastDisableTime)), -300.0F, 300.0F) / 300.0F);
+        return Math.abs(MathHelper.clamp((float)(Minecraft.getSystemTime() - (this.toggled ? this.lastEnableTime : this.lastDisableTime)), -300.0F, 300.0F) / 300.0F);
     }
 
     public void toggle() {

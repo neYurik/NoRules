@@ -41,7 +41,6 @@ public class Killaura extends Module
     }
 
     public static EntityPlayerSP entity = null;
-    public static Minecraft mc = Minecraft.getMinecraft();
     TimerHelper timerHelper = new TimerHelper();
     private float[] facing;
 

@@ -24,7 +24,6 @@ public class Velocity extends Module {
         Main.settingsManager.rSetting(new Setting("Vertical", this, 100, 0, 100, false));
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
     Entity entity;
 
     private double motionX;

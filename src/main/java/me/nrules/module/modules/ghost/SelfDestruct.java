@@ -10,8 +10,6 @@ public class SelfDestruct extends Module {
         super("SelfDestruct", Category.GHOST);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
     public void onEnable()
     {
         for (Module module : Main.moduleManager.getModuleList())

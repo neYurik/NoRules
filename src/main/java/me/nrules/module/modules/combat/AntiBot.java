@@ -20,8 +20,7 @@ public class AntiBot extends Module {
         super("AntiBot", Category.COMBAT);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-    public static List<EntityPlayer> bots = new ArrayList<EntityPlayer>();
+    public static List<EntityPlayer> bots = new ArrayList<>();
 
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)

@@ -25,36 +25,36 @@ public class EventRegister {
     }
 
     private static ConcurrentHashMap<Object, List<IEventListener>> getListeners(EventBus bus) {
-        return (ConcurrentHashMap<Object, List<IEventListener>>) Reflections.getPrivateValue(EventBus.class, bus, new String[]{"listeners"});
+        return Reflections.getPrivateValue(EventBus.class, bus, new String[]{"listeners"});
     }
 
     private static void registerBus(EventBus bus, Object target) {
-        Map<Object, ModContainer> listenerOwners = (Map<Object, ModContainer>) Reflections.getPrivateValue(EventBus.class, bus, new String[]{"listenerOwners"});
+        Map<Object, ModContainer> listenerOwners = Reflections.getPrivateValue(EventBus.class, bus, new String[]{"listenerOwners"});
         if (getListeners(bus).containsKey(target))
             return;
         MinecraftDummyContainer minecraftDummyContainer = Loader.instance().getMinecraftModContainer();
         listenerOwners.put(target, minecraftDummyContainer);
-        Reflections.setPrivateValue(EventBus.class, bus, listenerOwners, new String[]{"listenerOwners"});
+        Reflections.setPrivateValue(EventBus.class, bus, listenerOwners, "listenerOwners");
         Set<? extends Class<?>> supers = TypeToken.of(target.getClass()).getTypes().rawTypes();
         for (Method method : target.getClass().getMethods()) {
             for (Class<?> cls : supers) {
                 try {
                     Method real = cls.getDeclaredMethod(method.getName(), method.getParameterTypes());
-                    if (real.isAnnotationPresent((Class) SubscribeEvent.class)) {
+                    if (real.isAnnotationPresent(SubscribeEvent.class)) {
                         Class<?>[] parameterTypes = method.getParameterTypes();
                         Class<?> eventType = parameterTypes[0];
-                        int busID = ((Integer) Reflections.getPrivateValue(EventBus.class, bus, new String[]{"busID"})).intValue();
+                        int busID = Reflections.getPrivateValue(EventBus.class, bus, new String[]{"busID"});
                         ConcurrentHashMap<Object, List<IEventListener>> listeners = getListeners(bus);
-                        Constructor<?> ctr = eventType.getConstructor(new Class[0]);
+                        Constructor<?> ctr = eventType.getConstructor();
                         ctr.setAccessible(true);
                         Event event = (Event) ctr.newInstance(new Object[0]);
-                        ASMEventHandler listener = new ASMEventHandler(target, method, (ModContainer) minecraftDummyContainer, false);
-                        event.getListenerList().register(busID, listener.getPriority(), (IEventListener) listener);
+                        ASMEventHandler listener = new ASMEventHandler(target, method, minecraftDummyContainer, false);
+                        event.getListenerList().register(busID, listener.getPriority(), listener);
                         List<IEventListener> others = listeners.get(target);
                         if (others == null) {
                             others = new ArrayList<>();
                             listeners.put(target, others);
-                            Reflections.setPrivateValue(EventBus.class, bus, listeners, new String[]{"listeners"});
+                            Reflections.setPrivateValue(EventBus.class, bus, listeners, "listeners");
                         }
                         others.add(listener);
                         break;

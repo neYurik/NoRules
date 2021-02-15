@@ -13,7 +13,6 @@ public class AntiAFK extends Module {
     }
 
     TimerHelper timerHelper = new TimerHelper();
-    Minecraft mc = Minecraft.getMinecraft();
 
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)

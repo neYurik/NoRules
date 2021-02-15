@@ -3,12 +3,14 @@ package me.nrules.event;
 import io.netty.channel.*;
 import net.minecraft.client.Minecraft;
 
+import java.util.Objects;
+
 public class Connection extends ChannelDuplexHandler {
 
 
-    public static enum Side
+    public enum Side
     {
-        IN, OUT;
+        IN, OUT
     }
 
     Minecraft mc = Minecraft.getMinecraft();
@@ -20,8 +22,8 @@ public class Connection extends ChannelDuplexHandler {
         EventRegister.register(eventHandler);
         try
         {
-            ChannelPipeline pipeline = mc.getConnection().getNetworkManager().channel().pipeline();
-            pipeline.addBefore("packet_handler", "PacketHandler",  (ChannelHandler)this);
+            ChannelPipeline pipeline = Objects.requireNonNull(mc.getConnection()).getNetworkManager().channel().pipeline();
+            pipeline.addBefore("packet_handler", "PacketHandler", this);
         } catch (Exception exception) {
             exception.printStackTrace();
         }

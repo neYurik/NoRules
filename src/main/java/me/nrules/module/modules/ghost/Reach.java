@@ -21,8 +21,7 @@ public class Reach extends Module {
     }
 
     private static final AxisAlignedBB ZERO_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.0D, 0.0D, 0.0D);
-    private AxisAlignedBB boundingBox = ZERO_AABB;
-    Minecraft mc = Minecraft.getMinecraft();
+    private final AxisAlignedBB boundingBox = ZERO_AABB;
 
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event) {

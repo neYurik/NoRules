@@ -17,7 +17,7 @@ public class ChatSpammer extends Module {
 
     public ChatSpammer() {
         super("ChatSpammer", Category.FUN);
-        message = new ArrayList<String>();
+        message = new ArrayList<>();
         message.add("!NoRules users the best! " + "NR_CL1ENT -> " + " [" + getRandomString(15) + "]");
         message.add("!NoRules perfect! " + "NR_CL1ENT -> " + " [" + getRandomString(15) + "]");
         message.add("!I'm using NoRules because of I've parents! " + "NR_CL1ENT -> " + " [" + getRandomString(15) + "]");
@@ -50,7 +50,7 @@ public class ChatSpammer extends Module {
     {
         String str = "zxcvbnmlkjhgfdsaqwertyuiopQWERTYUIOPASDFGHJKLZXCVBNM1234567890";
         Random random = new Random();
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < d; i++)
         {
             int number = random.nextInt(62);

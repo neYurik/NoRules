@@ -9,6 +9,4 @@ public class NameProtect extends Module {
         super("NameProtect", Category.MISC);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
 }

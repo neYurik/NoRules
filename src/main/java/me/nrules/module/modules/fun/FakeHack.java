@@ -24,7 +24,6 @@ public class FakeHack extends Module {
     }
 
     TimerHelper delay;
-    Minecraft mc = Minecraft.getMinecraft();
 
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)

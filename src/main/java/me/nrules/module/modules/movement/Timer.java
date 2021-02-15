@@ -15,8 +15,6 @@ public class Timer extends Module {
 
     }
 
-    public static Minecraft mc = Minecraft.getMinecraft();
-
     @SubscribeEvent
     public void onUpdate(TickEvent.PlayerTickEvent event) {
 

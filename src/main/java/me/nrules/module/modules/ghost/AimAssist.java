@@ -24,9 +24,8 @@ public class AimAssist extends Module {
         Main.settingsManager.rSetting(new Setting("Range", this, 3.67, 3, 5, false));
     }
 
-    private static Minecraft mc = Minecraft.getMinecraft();
     private EntityPlayer target;
-    private List<EntityPlayer> targetlist = new ArrayList();
+    private List<EntityPlayer> targetlist = new ArrayList<>();
 
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event) {
