@@ -1,8 +1,8 @@
 package me.nrules.module.modules.combat;
 
 import me.nrules.FriendManager;
-import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
@@ -13,7 +13,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-import java.util.Iterator;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AimBot extends Module

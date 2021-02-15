@@ -1,10 +1,9 @@
 package me.nrules.module.modules.combat;
 
-import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemBow;
 import net.minecraft.network.play.client.CPacketPlayerDigging;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
@@ -25,7 +24,7 @@ public class FastBow extends Module {
             return;
 
         if(mc.player.inventory.getCurrentItem().getItem() instanceof ItemBow) {
-            if(mc.player.isHandActive() && mc.player.getItemInUseMaxCount() >=  Main.settingsManager.getSettingByName("Delay").getValDouble()) {
+            if(mc.player.isHandActive() && mc.player.getItemInUseMaxCount() >= Main.settingsManager.getSettingByName("Delay").getValDouble()) {
                 mc.player.connection.sendPacket(new CPacketPlayerDigging(CPacketPlayerDigging.Action.RELEASE_USE_ITEM, BlockPos.ORIGIN, mc.player.getHorizontalFacing()));
                 mc.player.connection.sendPacket(new CPacketPlayerTryUseItem(mc.player.getActiveHand()));
                 mc.player.stopActiveHand();

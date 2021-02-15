@@ -1,10 +1,9 @@
 package me.nrules.module.modules.ghost;
 
-import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.RayTraceResult;
@@ -28,26 +27,25 @@ public class Reach extends Module {
         if (mc.player == null && mc.world == null)
             return;
 
-        this.mc.pointedEntity = j(Main.settingsManager.getSettingByName("Range").getValDouble());
+        mc.pointedEntity = j(Main.settingsManager.getSettingByName("Range").getValDouble());
     }
 
     private Entity j(double distance) {
-        RayTraceResult r = this.mc.player.rayTrace(distance, 1.0F);
+        RayTraceResult r = mc.player.rayTrace(distance, 1.0F);
         double distanceTo = distance;
-        Vec3d getPosition = this.mc.player.getPositionEyes(1.0F);
+        Vec3d getPosition = mc.player.getPositionEyes(1.0F);
         if (r != null) {
             distanceTo = r.hitVec.distanceTo(getPosition);
         }
-        Vec3d ad = this.mc.player.getLook(1.0F);
+        Vec3d ad = mc.player.getLook(1.0F);
         Vec3d addVector = getPosition.addVector(ad.x * distance, ad.y * distance, ad.z * distance);
         Entity entity = null;
-        List a = this.mc.world.getEntitiesWithinAABBExcludingEntity(this.mc.player, this.boundingBox.expand(ad.x * distance, ad.y * distance, ad.z * distance).expand(1.0D, 1.0D, 1.0D));
+        List<Entity> a = mc.world.getEntitiesWithinAABBExcludingEntity(mc.player, this.boundingBox.expand(ad.x * distance, ad.y * distance, ad.z * distance).expand(1.0D, 1.0D, 1.0D));
         double d = distanceTo;
         int n3 = 0; for (int i = 0; i < a.size(); i = n3) {
-            Entity entity2 = (Entity)a.get(n3);
+            Entity entity2 = a.get(n3);
             if (entity2.canBeCollidedWith()) {
-                Entity entity3 = entity2;
-                float getCollisionBorderSize = entity3.getCollisionBorderSize();
+                float getCollisionBorderSize = entity2.getCollisionBorderSize();
                 AxisAlignedBB expand = this.boundingBox.expand(getCollisionBorderSize, getCollisionBorderSize, getCollisionBorderSize);
                 RayTraceResult calculateIntercept = expand.calculateIntercept(getPosition, addVector);
                 if (expand.contains(getPosition)) {
@@ -59,7 +57,7 @@ public class Reach extends Module {
                 else {
                     double j;
                     if ((calculateIntercept != null) && (((j = getPosition.distanceTo(calculateIntercept.hitVec)) < d) || (d == 0.0D))) {
-                        if (entity2 == this.mc.player.getRidingEntity()) {
+                        if (entity2 == mc.player.getRidingEntity()) {
                             if (d == 0.0D) {
                                 entity = entity2;
                             }

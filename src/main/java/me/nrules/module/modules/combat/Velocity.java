@@ -1,11 +1,10 @@
 package me.nrules.module.modules.combat;
 
-import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.event.Connection;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.server.SPacketEntityVelocity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -24,8 +23,6 @@ public class Velocity extends Module {
         Main.settingsManager.rSetting(new Setting("Vertical", this, 100, 0, 100, false));
     }
 
-    Entity entity;
-
     private double motionX;
     private double motionZ;
 
@@ -41,11 +38,11 @@ public class Velocity extends Module {
                 return;
 
             if (mc.player.hurtTime == 9) {
-                this.motionX = this.mc.player.motionX;
-                this.motionZ = this.mc.player.motionZ;
-            } else if (this.mc.player.hurtTime == 8) {
-                this.mc.player.motionX = -this.motionX * 1D;
-                this.mc.player.motionZ = -this.motionZ * 1D;
+                this.motionX = mc.player.motionX;
+                this.motionZ = mc.player.motionZ;
+            } else if (mc.player.hurtTime == 8) {
+                mc.player.motionX = -this.motionX;
+                mc.player.motionZ = -this.motionZ;
                 mc.player.motionY = -0.003f;
             }
         }
@@ -68,9 +65,9 @@ public class Velocity extends Module {
             float vertical = (float) Main.settingsManager.getSettingByName("Vertical").getValDouble();
 
             if (mc.player.hurtTime == mc.player.maxHurtTime && mc.player.maxHurtTime > 0) {
-                mc.player.motionX *= (float) horizontal / 100;
-                mc.player.motionY *= (float) vertical / 100;
-                mc.player.motionZ *= (float) horizontal / 100;
+                mc.player.motionX *= horizontal / 100;
+                mc.player.motionY *= vertical / 100;
+                mc.player.motionZ *= horizontal / 100;
             }
         }
 

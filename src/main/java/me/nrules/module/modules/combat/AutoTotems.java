@@ -1,10 +1,9 @@
 package me.nrules.module.modules.combat;
 
-import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
