@@ -2,7 +2,7 @@ package me.nrules.module.modules.ghost;
 
 
 import me.nrules.FriendManager;
-import me.nrules.GUIClick.settings.Setting;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;

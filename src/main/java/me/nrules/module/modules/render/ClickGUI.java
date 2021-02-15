@@ -1,6 +1,6 @@
 package me.nrules.module.modules.render;
 
-import me.nrules.GUIClick.clickgui.ClickGui;
+import me.nrules.clickgui.clickgui.ClickGui;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;

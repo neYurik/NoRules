@@ -1,6 +1,6 @@
 package me.nrules.module.modules.combat;
 
-import me.nrules.GUIClick.settings.Setting;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
 import me.nrules.event.Connection;
 import me.nrules.module.Category;
