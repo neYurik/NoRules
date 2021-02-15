@@ -1,7 +1,7 @@
 package me.nrules.module.modules.misc;
 
 
-import me.nrules.GUIClick.settings.Setting;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;

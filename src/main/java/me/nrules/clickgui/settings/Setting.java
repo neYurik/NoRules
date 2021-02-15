@@ -1,4 +1,4 @@
-package me.nrules.GUIClick.settings;
+package me.nrules.clickgui.settings;
 
 import me.nrules.module.Module;
 

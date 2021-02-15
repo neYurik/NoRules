@@ -1,13 +1,13 @@
-package me.nrules.GUIClick.clickgui.component.components;
+package me.nrules.clickgui.clickgui.component.components;
 
-import me.nrules.GUIClick.clickgui.ClickGui;
-import me.nrules.GUIClick.clickgui.component.Component;
-import me.nrules.GUIClick.clickgui.component.Frame;
-import me.nrules.GUIClick.clickgui.component.components.sub.Checkbox;
-import me.nrules.GUIClick.clickgui.component.components.sub.Keybind;
-import me.nrules.GUIClick.clickgui.component.components.sub.ModeButton;
-import me.nrules.GUIClick.clickgui.component.components.sub.Slider;
-import me.nrules.GUIClick.settings.Setting;
+import me.nrules.clickgui.clickgui.ClickGui;
+import me.nrules.clickgui.clickgui.component.Component;
+import me.nrules.clickgui.clickgui.component.Frame;
+import me.nrules.clickgui.clickgui.component.components.sub.Checkbox;
+import me.nrules.clickgui.clickgui.component.components.sub.Keybind;
+import me.nrules.clickgui.clickgui.component.components.sub.ModeButton;
+import me.nrules.clickgui.clickgui.component.components.sub.Slider;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;

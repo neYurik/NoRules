@@ -1,4 +1,4 @@
-package me.nrules.GUIClick.clickgui.component;
+package me.nrules.clickgui.clickgui.component;
 
 public class Component {
 

@@ -1,8 +1,8 @@
-package me.nrules.GUIClick.clickgui;
+package me.nrules.clickgui.clickgui;
 
-import me.nrules.GUIClick.clickgui.component.Component;
-import me.nrules.GUIClick.clickgui.component.Frame;
-import me.nrules.GUIClick.settings.SnowSetting;
+import me.nrules.clickgui.clickgui.component.Component;
+import me.nrules.clickgui.clickgui.component.Frame;
+import me.nrules.clickgui.settings.SnowSetting;
 import me.nrules.module.Category;
 import me.nrules.util.TimerHelper;
 import net.minecraft.client.Minecraft;

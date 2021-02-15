@@ -1,7 +1,7 @@
 package me.nrules.module.modules.render;
 
 import me.nrules.FriendManager;
-import me.nrules.GUIClick.settings.Setting;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
 import me.nrules.helper.FakeEntity;
 import me.nrules.module.Category;

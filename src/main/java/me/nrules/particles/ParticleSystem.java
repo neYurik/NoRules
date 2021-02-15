@@ -1,6 +1,6 @@
 package me.nrules.particles;
 
-import me.nrules.GUIClick.clickgui.ClickGui;
+import me.nrules.clickgui.clickgui.ClickGui;
 import me.nrules.util.RenderUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;

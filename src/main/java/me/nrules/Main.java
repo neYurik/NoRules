@@ -1,7 +1,7 @@
 package me.nrules;
 
-import me.nrules.GUIClick.clickgui.ClickGui;
-import me.nrules.GUIClick.settings.SettingsManager;
+import me.nrules.clickgui.clickgui.ClickGui;
+import me.nrules.clickgui.settings.SettingsManager;
 import me.nrules.event.EventHandler;
 import me.nrules.event.EventRegister;
 import me.nrules.module.Module;

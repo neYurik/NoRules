@@ -1,8 +1,8 @@
-package me.nrules.GUIClick.clickgui.component.components.sub;
+package me.nrules.clickgui.clickgui.component.components.sub;
 
-import me.nrules.GUIClick.clickgui.component.Component;
-import me.nrules.GUIClick.clickgui.component.components.Button;
-import me.nrules.GUIClick.settings.Setting;
+import me.nrules.clickgui.clickgui.component.Component;
+import me.nrules.clickgui.clickgui.component.components.Button;
+import me.nrules.clickgui.settings.Setting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
