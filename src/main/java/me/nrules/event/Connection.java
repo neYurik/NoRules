@@ -1,6 +1,9 @@
 package me.nrules.event;
 
-import io.netty.channel.*;
+import io.netty.channel.ChannelDuplexHandler;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelPipeline;
+import io.netty.channel.ChannelPromise;
 import net.minecraft.client.Minecraft;
 
 import java.util.Objects;

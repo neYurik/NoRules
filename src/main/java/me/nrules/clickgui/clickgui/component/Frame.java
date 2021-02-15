@@ -1,7 +1,7 @@
 package me.nrules.clickgui.clickgui.component;
 
-import me.nrules.clickgui.clickgui.component.components.Button;
 import me.nrules.Main;
+import me.nrules.clickgui.clickgui.component.components.Button;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;

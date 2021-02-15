@@ -2,7 +2,6 @@ package me.nrules.module.modules.misc;
 
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;

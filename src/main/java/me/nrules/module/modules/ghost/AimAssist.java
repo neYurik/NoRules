@@ -2,11 +2,10 @@ package me.nrules.module.modules.ghost;
 
 
 import me.nrules.FriendManager;
-import me.nrules.clickgui.settings.Setting;
 import me.nrules.Main;
+import me.nrules.clickgui.settings.Setting;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.MathHelper;

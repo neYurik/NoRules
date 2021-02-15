@@ -3,7 +3,6 @@ package me.nrules.module.modules.combat;
 import com.google.common.collect.Ordering;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiPlayerTabOverlay;
 import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.entity.Entity;
@@ -28,9 +27,9 @@ public class AntiBot extends Module {
         if (mc.player == null && mc.world == null)
             return;
 
-        for (Object entity : this.mc.world.loadedEntityList) {
-            if (((Entity)entity).isInvisible() && entity != this.mc.player)
-                this.mc.world.removeEntity((Entity)entity);
+        for (Object entity : mc.world.loadedEntityList) {
+            if (((Entity)entity).isInvisible() && entity != mc.player)
+                mc.world.removeEntity((Entity)entity);
         }
 
         for (int k = 0; k < mc.world.playerEntities.size(); k++)
@@ -40,7 +39,6 @@ public class AntiBot extends Module {
            if (!bots.contains(ent) && !tablist.contains(ent))
            {
                bots.add(ent);
-               continue;
            } else if (bots.contains(ent) && tablist.contains(ent))
            {
                bots.remove(ent);
@@ -51,13 +49,13 @@ public class AntiBot extends Module {
     private List<EntityPlayer> getTapPlayerList()
     {
         final List<EntityPlayer> list;
-        (list = new ArrayList<EntityPlayer>()).clear();
+        (list = new ArrayList<>()).clear();
         Ordering<NetworkPlayerInfo>ENTRY_ORDERING = ENTRY_ORDERING();
         if (ENTRY_ORDERING == null)
         {
             return list;
         }
-        final List players = ENTRY_ORDERING.sortedCopy(mc.player.connection.getPlayerInfoMap());
+        final List<NetworkPlayerInfo> players = ENTRY_ORDERING.sortedCopy(mc.player.connection.getPlayerInfoMap());
         for (final Object o : players)
         {
             final NetworkPlayerInfo info = (NetworkPlayerInfo) o;

@@ -9,8 +9,6 @@ import net.minecraft.network.play.server.SPacketEntityVelocity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import javax.swing.text.html.parser.Entity;
-
 
 public class Velocity extends Module {
     public Velocity() {
