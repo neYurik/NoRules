@@ -5,8 +5,6 @@ import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.input.Keyboard;
-import scala.collection.parallel.ParIterableLike;
 
 public class Sprint extends Module
 {

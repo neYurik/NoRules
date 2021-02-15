@@ -1,6 +1,5 @@
 package me.nrules.module.modules.ghost;
 
-import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.module.ModuleManager;

@@ -1,8 +1,5 @@
 package me.nrules.GUIClick.clickgui.component.components;
 
-import java.awt.Color;
-import java.util.ArrayList;
-
 import me.nrules.GUIClick.clickgui.ClickGui;
 import me.nrules.GUIClick.clickgui.component.Component;
 import me.nrules.GUIClick.clickgui.component.Frame;
@@ -12,15 +9,14 @@ import me.nrules.GUIClick.clickgui.component.components.sub.ModeButton;
 import me.nrules.GUIClick.clickgui.component.components.sub.Slider;
 import me.nrules.GUIClick.settings.Setting;
 import me.nrules.Main;
-import me.nrules.font.FontLoader;
-import me.nrules.font.MinecraftFontRenderer;
 import me.nrules.module.Module;
-import me.nrules.util.TimerHelper;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.Gui;
 import org.lwjgl.opengl.GL11;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
+import java.awt.*;
+import java.util.ArrayList;
 
 public class Button extends Component {
 

@@ -5,10 +5,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.common.MinecraftForge;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 public class Module {
 
     public String name;

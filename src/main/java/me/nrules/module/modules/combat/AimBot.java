@@ -14,7 +14,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.Iterator;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AimBot extends Module

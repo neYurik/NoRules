@@ -1,37 +1,24 @@
 package me.nrules.module.modules.render;
 
-import me.nrules.GUIClick.settings.Setting;
-import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.block.model.IBakedModel;
-import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.opengl.GL11;
 
-import java.awt.*;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class ItemPhysics extends Module {
     public ItemPhysics() {

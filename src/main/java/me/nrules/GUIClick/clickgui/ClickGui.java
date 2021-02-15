@@ -1,25 +1,22 @@
 package me.nrules.GUIClick.clickgui;
 
-import java.awt.*;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
-
 import me.nrules.GUIClick.clickgui.component.Component;
 import me.nrules.GUIClick.clickgui.component.Frame;
 import me.nrules.GUIClick.settings.SnowSetting;
-import me.nrules.font.FontLoader;
-import me.nrules.font.MinecraftFontRenderer;
 import me.nrules.module.Category;
-import me.nrules.module.ModuleManager;
 import me.nrules.util.TimerHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
-import net.minecraft.client.gui.GuiScreen;
+
+import java.awt.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
 
 
 public class ClickGui extends GuiScreen {

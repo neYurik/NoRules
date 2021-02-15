@@ -1,48 +1,28 @@
 package me.nrules.module.modules.render;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Ordering;
-import com.mojang.realmsclient.gui.ChatFormatting;
-import me.nrules.FriendManager;
 import me.nrules.GUIClick.settings.Setting;
 import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import me.nrules.util.EntityUtils;
 import me.nrules.util.RenderUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.StringUtils;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.lwjgl.opengl.GL11;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-import javax.vecmath.Vector3d;
-import javax.vecmath.Vector4d;
-import java.awt.*;
-import java.text.DecimalFormat;
-import java.util.*;
+import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class NameTags extends Module {
     public NameTags() {

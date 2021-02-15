@@ -5,7 +5,6 @@ import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.input.Keyboard;
 
 public class Step extends Module {
     public Step() {

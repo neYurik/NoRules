@@ -5,20 +5,10 @@ import me.nrules.Main;
 import me.nrules.event.Connection;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import me.nrules.util.MotionUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.network.Packet;
-import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.server.SPacketEntityVelocity;
-import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
-import net.minecraftforge.event.entity.living.LivingSetAttackTargetEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import javax.swing.text.html.parser.Entity;
 

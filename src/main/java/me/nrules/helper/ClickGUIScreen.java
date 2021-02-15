@@ -1,9 +1,8 @@
-package me.nrules.clickGUI;
+package me.nrules.helper;
 
 import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import me.nrules.module.ModuleManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
@@ -11,7 +10,6 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.util.ResourceLocation;
-import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;

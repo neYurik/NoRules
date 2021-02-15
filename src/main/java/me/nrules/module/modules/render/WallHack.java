@@ -1,6 +1,5 @@
 package me.nrules.module.modules.render;
 
-import org.lwjgl.opengl.GL11;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
@@ -9,6 +8,7 @@ import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.lwjgl.opengl.GL11;
 
 public class WallHack extends Module {
     public WallHack() {

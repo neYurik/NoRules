@@ -4,12 +4,10 @@ import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.input.Keyboard;
 
 public class NoFall extends Module
 {

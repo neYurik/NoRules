@@ -6,21 +6,15 @@ import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.RenderUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityArmorStand;
-import net.minecraft.tileentity.*;
-import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
+import net.minecraft.tileentity.TileEntityEnderChest;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
-import java.util.Iterator;
 
 public class ChestUI extends Module {
     public ChestUI() {

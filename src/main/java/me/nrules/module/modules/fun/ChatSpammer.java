@@ -1,17 +1,13 @@
 package me.nrules.module.modules.fun;
 
-import me.nrules.GUIClick.settings.Setting;
-import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.TimerHelper;
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class ChatSpammer extends Module {

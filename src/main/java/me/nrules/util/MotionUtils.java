@@ -1,7 +1,6 @@
 package me.nrules.util;
 
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class MotionUtils
 {

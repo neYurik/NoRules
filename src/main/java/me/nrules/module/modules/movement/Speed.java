@@ -13,8 +13,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.input.Keyboard;
 
-import java.lang.reflect.Field;
-
 public class Speed extends Module {
     public Speed() {
         super("Speed", Category.MOVEMENT);

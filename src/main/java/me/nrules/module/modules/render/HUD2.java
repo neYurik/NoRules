@@ -4,16 +4,14 @@ import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.module.ModuleManager;
 import me.nrules.util.RenderUtils;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.opengl.GL11;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
+import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class HUD2 extends Module {

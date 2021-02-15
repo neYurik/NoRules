@@ -1,14 +1,11 @@
 package me.nrules.module.modules.movement;
 
 import me.nrules.GUIClick.clickgui.ClickGui;
-import me.nrules.clickGUI.ClickGUIScreen;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import me.nrules.module.modules.render.ClickGUI;
 import me.nrules.util.MotionUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;

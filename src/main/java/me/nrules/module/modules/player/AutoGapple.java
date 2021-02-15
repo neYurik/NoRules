@@ -1,6 +1,5 @@
 package me.nrules.module.modules.player;
 
-import me.nrules.GUIClick.clickgui.component.components.sub.Keybind;
 import me.nrules.GUIClick.settings.Setting;
 import me.nrules.Main;
 import me.nrules.module.Category;
@@ -11,7 +10,6 @@ import net.minecraft.item.ItemAppleGold;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.input.Keyboard;
 
 public class AutoGapple extends Module {
     public AutoGapple() {

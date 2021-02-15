@@ -2,7 +2,6 @@ package me.nrules.module.modules.fun;
 
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import me.nrules.util.RotationUtils;
 import me.nrules.util.TimerHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;

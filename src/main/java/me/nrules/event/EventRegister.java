@@ -6,7 +6,6 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.MinecraftDummyContainer;
 import net.minecraftforge.fml.common.ModContainer;
 import net.minecraftforge.fml.common.eventhandler.*;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;

@@ -1,18 +1,15 @@
 package me.nrules.GUIClick.clickgui.component.components.sub;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 import me.nrules.GUIClick.clickgui.component.Component;
 import me.nrules.GUIClick.clickgui.component.components.Button;
 import me.nrules.GUIClick.settings.Setting;
-import me.nrules.font.FontLoader;
-import me.nrules.font.MinecraftFontRenderer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.Gui;
 import org.lwjgl.opengl.GL11;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 //Your Imports
 

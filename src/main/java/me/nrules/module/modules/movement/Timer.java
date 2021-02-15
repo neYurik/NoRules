@@ -2,16 +2,11 @@ package me.nrules.module.modules.movement;
 
 import me.nrules.GUIClick.settings.Setting;
 import me.nrules.Main;
-import me.nrules.helper.Mappings;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import net.minecraftforge.fml.relauncher.ReflectionHelper;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
 
 public class Timer extends Module {
     public Timer() {

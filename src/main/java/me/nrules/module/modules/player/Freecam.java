@@ -1,10 +1,6 @@
 package me.nrules.module.modules.player;
 
-import me.nrules.GUIClick.settings.Setting;
-import me.nrules.Main;
 import me.nrules.event.Connection;
-import me.nrules.event.EventHandler;
-import me.nrules.helper.FakeEntity;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.MotionUtils;

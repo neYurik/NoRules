@@ -1,11 +1,8 @@
 package me.nrules.GUIClick.settings;
 
-import java.util.ArrayList;
-
-//Your Imports
-import me.nrules.GUIClick.settings.Setting;
 import me.nrules.module.Module;
-import me.nrules.util.Refrence;
+
+import java.util.ArrayList;
 
 
 public class SettingsManager {

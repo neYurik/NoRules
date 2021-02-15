@@ -4,8 +4,6 @@ import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
-import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
-import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 

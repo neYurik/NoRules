@@ -1,13 +1,9 @@
 package me.nrules.module.modules.movement;
 
-import me.nrules.GUIClick.settings.Setting;
-import me.nrules.Main;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.MotionUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.init.Items;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;

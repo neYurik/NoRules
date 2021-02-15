@@ -2,24 +2,9 @@ package me.nrules.module.modules.movement;
 
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
-import net.minecraft.block.BlockHopper;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.client.settings.GameSettings;
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.MoverType;
-import net.minecraft.network.play.client.CPacketPlayer;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.input.Keyboard;
 
 public class NoClip extends Module
 {

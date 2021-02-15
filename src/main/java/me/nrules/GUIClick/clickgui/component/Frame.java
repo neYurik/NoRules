@@ -1,20 +1,16 @@
 package me.nrules.GUIClick.clickgui.component;
 
-import java.awt.*;
-import java.util.ArrayList;
-
-import me.nrules.GUIClick.clickgui.ClickGui;
 import me.nrules.GUIClick.clickgui.component.components.Button;
 import me.nrules.Main;
-import me.nrules.font.FontLoader;
-import me.nrules.font.MinecraftFontRenderer;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
+import org.lwjgl.opengl.GL11;
+
+import java.awt.*;
+import java.util.ArrayList;
 
 //Your Imports
 

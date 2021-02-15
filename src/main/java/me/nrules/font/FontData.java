@@ -4,6 +4,7 @@ import net.minecraft.client.renderer.GlStateManager;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+
 import static org.lwjgl.opengl.GL11.*;
 
 public final class FontData {

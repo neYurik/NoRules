@@ -5,7 +5,6 @@ import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.apache.http.util.EntityUtils;
 import org.lwjgl.input.Mouse;
 
 import java.util.Random;

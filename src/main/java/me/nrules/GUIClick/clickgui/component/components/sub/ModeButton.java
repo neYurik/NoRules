@@ -3,14 +3,11 @@ package me.nrules.GUIClick.clickgui.component.components.sub;
 import me.nrules.GUIClick.clickgui.component.Component;
 import me.nrules.GUIClick.clickgui.component.components.Button;
 import me.nrules.GUIClick.settings.Setting;
-import me.nrules.font.FontLoader;
-import me.nrules.font.MinecraftFontRenderer;
 import me.nrules.module.Module;
-import net.minecraft.client.gui.FontRenderer;
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
+import org.lwjgl.opengl.GL11;
 
 //Your Imports
 

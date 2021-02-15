@@ -1,18 +1,18 @@
 package me.nrules.module;
 
-import com.sun.org.apache.regexp.internal.RE;
 import me.nrules.Main;
 import me.nrules.module.modules.combat.*;
 import me.nrules.module.modules.fun.AntiAim;
 import me.nrules.module.modules.fun.ChatSpammer;
 import me.nrules.module.modules.fun.FakeHack;
-import me.nrules.module.modules.ghost.*;
+import me.nrules.module.modules.ghost.AimAssist;
+import me.nrules.module.modules.ghost.Hitbox;
+import me.nrules.module.modules.ghost.SelfDelete;
+import me.nrules.module.modules.ghost.SelfDestruct;
 import me.nrules.module.modules.misc.*;
 import me.nrules.module.modules.movement.*;
 import me.nrules.module.modules.player.*;
 import me.nrules.module.modules.render.*;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.ArrayList;
 import java.util.List;

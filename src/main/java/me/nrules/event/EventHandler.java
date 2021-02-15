@@ -1,9 +1,7 @@
 package me.nrules.event;
 
-import me.nrules.GUIClick.clickgui.ClickGui;
 import me.nrules.Main;
 import me.nrules.module.Module;
-import me.nrules.module.ModuleManager;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;

@@ -7,7 +7,6 @@ import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.EntityUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityArmorStand;

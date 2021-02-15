@@ -4,9 +4,7 @@ import me.nrules.module.Category;
 import me.nrules.module.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class NoPush extends Module {
     public NoPush() {
