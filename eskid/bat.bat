@@ -1,1 +1,0 @@
-java -jar eskid-1.7.3-obf.jar
