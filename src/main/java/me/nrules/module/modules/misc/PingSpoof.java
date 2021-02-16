@@ -2,9 +2,9 @@ package me.nrules.module.modules.misc;
 
 import me.nrules.Main;
 import me.nrules.clickgui.settings.Setting;
-import me.nrules.event.Connection;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
+import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketKeepAlive;
 
 import java.time.Duration;
@@ -28,15 +28,14 @@ public class PingSpoof extends Module {
 
 
     @Override
-    public boolean onPacket(Object packet, Connection.Side side) {
-        if (side == Connection.Side.OUT)
-            if (packet instanceof CPacketKeepAlive && this.isToggled()) {
-                Instant now = Instant.now();
-                if ((float) Duration.between(this.lastSent, now).getSeconds() >= Main.settingsManager.getSettingByName("Delay").getValDouble() / 10.0f) {
-                    this.lastSent = Instant.now();
-                    return false;
-                }
+    public boolean onPacketSent(Packet<?> packet) {
+        if (packet instanceof CPacketKeepAlive && this.isToggled()) {
+            Instant now = Instant.now();
+            if ((float) Duration.between(this.lastSent, now).getSeconds() >= Main.settingsManager.getSettingByName("Delay").getValDouble() / 10.0f) {
+                this.lastSent = Instant.now();
+                return false;
             }
+        }
         return true;
     }
 }

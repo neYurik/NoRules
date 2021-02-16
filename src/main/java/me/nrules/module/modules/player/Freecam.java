@@ -1,10 +1,10 @@
 package me.nrules.module.modules.player;
 
-import me.nrules.event.Connection;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.MotionUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.event.entity.living.LivingEvent;
@@ -59,30 +59,28 @@ public class Freecam extends Module {
         if (Keyboard.isKeyDown(Keyboard.KEY_W) || Keyboard.isKeyDown(Keyboard.KEY_S) ||  Keyboard.isKeyDown(Keyboard.KEY_A) || Keyboard.isKeyDown(Keyboard.KEY_D))
         {
             float f = MotionUtils.getDirection();
-            mc.player.motionX -= (double) (MathHelper.sin(f) * 1.0049F);
-            mc.player.motionZ += (double) (MathHelper.cos(f) * 1.0049F);
+            mc.player.motionX -= (MathHelper.sin(f) * 1.0049F);
+            mc.player.motionZ += (MathHelper.cos(f) * 1.0049F);
         }
 
         if (mc.player.isInWater() && mc.player.isInLava())
         {
             float f = MotionUtils.getDirection();
-            mc.player.motionX -= (double) (MathHelper.sin(f) * 1.0049F);
-            mc.player.motionZ += (double) (MathHelper.cos(f) * 1.0049F);
+            mc.player.motionX -= (MathHelper.sin(f) * 1.0049F);
+            mc.player.motionZ += (MathHelper.cos(f) * 1.0049F);
         }
 
     }
 
 
     @Override
-    public boolean onPacket(Object packet, Connection.Side side)
-    {
+    public boolean onPacketSent(Packet<?> packet) {
         boolean skip = true;
-        {
-            if(side == Connection.Side.OUT && packet instanceof CPacketPlayer)
-            {
-                skip = false;
-            }
+
+        if (packet instanceof CPacketPlayer) {
+            skip = false;
         }
+
         return skip;
     }
 

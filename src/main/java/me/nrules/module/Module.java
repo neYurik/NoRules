@@ -1,6 +1,5 @@
 package me.nrules.module;
 
-import me.nrules.event.Connection;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.Packet;
 import net.minecraft.util.math.MathHelper;
