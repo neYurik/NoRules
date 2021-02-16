@@ -22,7 +22,7 @@ public class ModuleManager
 
     public static ArrayList<Module> modules;
 
-    public static Module getModule(Class moduleClass) {
+    public static Module getModule(Class<?> moduleClass) {
         for (Module module : modules) {
             if (module.getClass() != moduleClass) {
                 continue;
@@ -36,7 +36,7 @@ public class ModuleManager
     {
 
 
-        (modules = new ArrayList<Module>()).clear();
+        (modules = new ArrayList<>()).clear();
 
         //COMBAT
         if (Main.hacks()) {
@@ -108,7 +108,7 @@ public class ModuleManager
 
     public Module getModule(String name)
     {
-        for (Module m : this.modules)
+        for (Module m : modules)
         {
             if (m.getName().equalsIgnoreCase(name))
             {
@@ -124,8 +124,8 @@ public class ModuleManager
 
     public ArrayList<Module> getModulesInCategory(Category categoryIn)
     {
-        ArrayList<Module> mods = new ArrayList<Module>();
-            for(Module m : this.modules)
+        ArrayList<Module> mods = new ArrayList<>();
+            for(Module m : modules)
             {
                 if(m.getCategory() == categoryIn)
                     mods.add(m);
@@ -135,14 +135,14 @@ public class ModuleManager
 
     public ArrayList<Module> getModuleList()
     {
-        return this.modules;
+        return modules;
     }
 
     public static List<Module> getModulesByCategory(Category c)
     {
         List<Module> modules = new ArrayList<Module>();
 
-        for (Module m : Main.moduleManager.modules)
+        for (Module m : ModuleManager.modules)
         {
             if (m.getCategory() == c)
                 modules.add(m);
