@@ -2,7 +2,6 @@ package me.nrules.module.modules.player;
 
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -11,7 +10,6 @@ public class NoPush extends Module {
         super("NoPush", Category.PLAYER);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
 
     @SubscribeEvent
     public void onUpdate(LivingEvent.LivingUpdateEvent event)

@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 public class VClip extends Module {
+
     public VClip() {
         super("VClip", Category.PLAYER);
         Main.settingsManager.rSetting(new Setting("Y", this, 56, 1, 200, false));
@@ -33,8 +34,4 @@ public class VClip extends Module {
             Minecraft.getMinecraft().player.motionY = 0;
     }
 
-    @Override
-    public void onDisable() {
-        super.onDisable();
-    }
 }

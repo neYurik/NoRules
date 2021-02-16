@@ -8,7 +8,6 @@ import me.nrules.module.Module;
 import me.nrules.util.MotionUtils;
 import me.nrules.util.RenderUtils;
 import me.nrules.util.RotationUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -33,12 +32,11 @@ public class TargetStrafe2 extends Module {
     }
 
     public static transient boolean direction = false;
-    Minecraft mc = Minecraft.getMinecraft();
     public static int index;
     public static EntityLivingBase target;
 
     @SubscribeEvent
-    public void onRender3D(RenderWorldLastEvent event) throws Throwable {
+    public void onRender3D(RenderWorldLastEvent event) {
         if (mc.world == null || mc.player == null) return;
 
         for (Entity entity : mc.world.getLoadedEntityList()) {

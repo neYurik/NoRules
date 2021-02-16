@@ -41,13 +41,13 @@ public class PotionUI extends Module
             for (PotionEffect potioneffect : sorted) {
                 Potion potion = potioneffect.getPotion();
                 ++i;
-                String s1 = I18n.format(potion.getName(), new Object[0]);
+                String s1 = I18n.format(potion.getName());
                 if (potioneffect.getAmplifier() == 1) {
-                    s1 = s1 + " " + I18n.format("enchantment.level.2", new Object[0]);
+                    s1 = s1 + " " + I18n.format("enchantment.level.2");
                 } else if (potioneffect.getAmplifier() == 2) {
-                    s1 = s1 + " " + I18n.format("enchantment.level.3", new Object[0]);
+                    s1 = s1 + " " + I18n.format("enchantment.level.3");
                 } else if (potioneffect.getAmplifier() == 3) {
-                    s1 = s1 + " " + I18n.format("enchantment.level.4", new Object[0]);
+                    s1 = s1 + " " + I18n.format("enchantment.level.4");
                 }
                 s1 = s1 + " \u00a7f" + Potion.getPotionDurationString(potioneffect, 1.0F);
                 mc.fontRenderer.drawStringWithShadow(s1,

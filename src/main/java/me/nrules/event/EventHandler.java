@@ -37,8 +37,8 @@ public class EventHandler
 //        }
 //    }
 
-    @SubscribeEvent(priority = EventPriority.HIGHEST) public void
-    logIn(FMLNetworkEvent.ClientConnectedToServerEvent e) {
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void logIn(FMLNetworkEvent.ClientConnectedToServerEvent e) {
         new ConnectionHandler(this, (NetHandlerPlayClient) e.getHandler());
     }
 

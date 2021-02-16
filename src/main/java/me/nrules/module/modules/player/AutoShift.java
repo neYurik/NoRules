@@ -3,7 +3,6 @@ package me.nrules.module.modules.player;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.TimerHelper;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.util.MovementInput;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -16,7 +15,6 @@ public class AutoShift extends Module {
         super("AutoShift", Category.PLAYER);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
     TimerHelper timerHelper = new TimerHelper();
     MovementInput movementInput = new MovementInput();
 

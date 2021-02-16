@@ -42,7 +42,7 @@ public class TargetStrafe extends Module {
     public static int index;
 
     @SubscribeEvent
-    public void onRender3D(RenderWorldLastEvent event) throws Throwable {
+    public void onRender3D(RenderWorldLastEvent event) {
         if (mc.world == null || mc.player == null) return;
 
         for (Entity entity : mc.world.getLoadedEntityList()) {

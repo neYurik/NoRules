@@ -4,7 +4,6 @@ import me.nrules.Main;
 import me.nrules.clickgui.settings.Setting;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.item.ItemAppleGold;
 import net.minecraft.util.EnumHand;
@@ -17,7 +16,6 @@ public class AutoGapple extends Module {
         Main.settingsManager.rSetting(new Setting("Health", this, 9, 0, 20, false));
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
     @SubscribeEvent
     public void onUpdate(TickEvent.PlayerTickEvent event)
     {

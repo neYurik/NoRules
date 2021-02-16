@@ -3,7 +3,6 @@ package me.nrules.module.modules.player;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
 import me.nrules.util.MotionUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.math.MathHelper;
@@ -16,8 +15,7 @@ public class Freecam extends Module {
         super("Freecam", Category.PLAYER);
     }
 
-    Minecraft mc = Minecraft.getMinecraft();
-
+    @Override
     public void onDisable()
     {
        mc.player.noClip = false;
