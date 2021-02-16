@@ -12,7 +12,6 @@ public class Fly extends Module {
     }
 
 
-    Minecraft mc = Minecraft.getMinecraft();
 
     @SubscribeEvent
     public void onUpdate(TickEvent.ClientTickEvent event)
@@ -20,13 +19,13 @@ public class Fly extends Module {
         if (Minecraft.getMinecraft().player == null && Minecraft.getMinecraft().world == null)
             return;
 
-        Minecraft.getMinecraft().player.capabilities.isFlying = true;
+        mc.player.capabilities.isFlying = true;
 
     }
 
     public void onDisable()
     {
-        Minecraft.getMinecraft().player.capabilities.isFlying = false;
+        mc.player.capabilities.isFlying = false;
         super.onDisable();
     }
 }

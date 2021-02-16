@@ -88,7 +88,8 @@ public class Module {
         return this.category;
     }
 
-    public boolean onPacket(Object packet, Connection.Side side) { return true;
+    public boolean onPacket(Object packet, Connection.Side side) {
+        return true;
     }
 
     public int getColor() {
@@ -98,6 +99,4 @@ public class Module {
     public void setColor(final int color) {
         this.color = color;
     }
-
-
 }

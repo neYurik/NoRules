@@ -35,14 +35,16 @@ public class Connection extends ChannelDuplexHandler {
         @Override
         public void channelRead(ChannelHandlerContext ctx, Object packet) throws Exception
         {
-            if (!eventHandler.onPacket(packet, Connection.Side.IN)) return;
+            if (!eventHandler.onPacket(packet, Connection.Side.IN))
+                return;
             super.channelRead(ctx, packet);
         }
 
         @Override
         public void write(ChannelHandlerContext ctx, Object packet, ChannelPromise promise) throws Exception
         {
-            if (!eventHandler.onPacket(packet, Side.OUT)) return;
+            if (!eventHandler.onPacket(packet, Side.OUT))
+                return;
             super.write(ctx, packet, promise);
         }
     }

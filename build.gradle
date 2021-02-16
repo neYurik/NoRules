@@ -14,8 +14,8 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 version = '1.0'
-group = 'com.yourname.modid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+group = 'me.nrules' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'NoRules'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 

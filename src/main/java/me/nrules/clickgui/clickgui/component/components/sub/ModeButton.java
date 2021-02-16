@@ -20,7 +20,6 @@ public class ModeButton extends Component {
 	private int offset;
 	private int x;
 	private int y;
-	private Module mod;
 	public static FontRenderer font = Minecraft.getMinecraft().fontRenderer;
 
 	private int modeIndex;
@@ -28,7 +27,6 @@ public class ModeButton extends Component {
 	public ModeButton(Setting set, Button button, Module mod, int offset) {
 		this.set = set;
 		this.parent = button;
-		this.mod = mod;
 		this.x = button.parent.getX() + button.parent.getWidth();
 		this.y = button.parent.getY() + button.offset;
 		this.offset = offset;

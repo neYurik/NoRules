@@ -26,16 +26,14 @@ public class Button extends Component {
 	private boolean isHovered;
 	private ArrayList<Component> subcomponents;
 	public boolean open;
-	private int height;
 	public static FontRenderer font = Minecraft.getMinecraft().fontRenderer;
 	
 	public Button(Module mod, Frame parent, int offset) {
 		this.mod = mod;
 		this.parent = parent;
 		this.offset = offset;
-		this.subcomponents = new ArrayList<Component>();
+		this.subcomponents = new ArrayList<>();
 		this.open = false;
-		height = 13;
 		int opY = offset + 12;
 		if(Main.settingsManager.getSettingsByMod(mod) != null) {
 			for(Setting s : Main.settingsManager.getSettingsByMod(mod)){

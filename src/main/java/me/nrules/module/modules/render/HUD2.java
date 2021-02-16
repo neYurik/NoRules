@@ -20,7 +20,6 @@ public class HUD2 extends Module {
     }
 
     public static Minecraft mc = Minecraft.getMinecraft();
-    public static FontRenderer fr = Minecraft.getMinecraft().fontRenderer;
 
     @SubscribeEvent
     public void onUpdate(TickEvent.RenderTickEvent event)
