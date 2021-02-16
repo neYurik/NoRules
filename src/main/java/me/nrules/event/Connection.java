@@ -5,6 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.ChannelPromise;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.Packet;
 
 import java.util.Objects;
 
@@ -33,18 +34,17 @@ public class Connection extends ChannelDuplexHandler {
     }
 
         @Override
-        public void channelRead(ChannelHandlerContext ctx, Object packet) throws Exception
-        {
-            if (!eventHandler.onPacket(packet, Connection.Side.IN))
-                return;
-            super.channelRead(ctx, packet);
+        public void channelRead(ChannelHandlerContext ctx, Object packet) throws Exception {
+            if (eventHandler.enableModule().stream().allMatch(m -> m.onPacketReceive((Packet<?>) packet))) {
+                super.channelRead(ctx, packet);
+            }
         }
 
         @Override
         public void write(ChannelHandlerContext ctx, Object packet, ChannelPromise promise) throws Exception
         {
-            if (!eventHandler.onPacket(packet, Side.OUT))
-                return;
-            super.write(ctx, packet, promise);
+            if (eventHandler.enableModule().stream().allMatch(m -> m.onPacketSent((Packet<?>) packet))) {
+                super.write(ctx, packet, promise);
+            }
         }
     }

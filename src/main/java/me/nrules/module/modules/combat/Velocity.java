@@ -5,6 +5,7 @@ import me.nrules.clickgui.settings.Setting;
 import me.nrules.event.Connection;
 import me.nrules.module.Category;
 import me.nrules.module.Module;
+import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.SPacketEntityVelocity;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -73,7 +74,7 @@ public class Velocity extends Module {
 
 
     @Override
-    public boolean onPacket(Object packet, Connection.Side side)
+    public boolean onPacketReceive(Packet<?> packet)
     {
         if (packet instanceof SPacketEntityVelocity && Main.settingsManager.getSettingByName("Cancel").getValBoolean())
             return mc.player.getEntityId() != ((SPacketEntityVelocity)packet).getEntityID();

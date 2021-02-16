@@ -2,6 +2,7 @@ package me.nrules.module;
 
 import me.nrules.event.Connection;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.Packet;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -88,9 +89,14 @@ public class Module {
         return this.category;
     }
 
-    public boolean onPacket(Object packet, Connection.Side side) {
+    public boolean onPacketSent(Packet<?> packet) {
         return true;
     }
+
+    public boolean onPacketReceive(Packet<?> packet) {
+        return true;
+    }
+
 
     public int getColor() {
         return this.color;

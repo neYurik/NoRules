@@ -6,23 +6,19 @@ import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
+import java.util.ArrayList;
+
+import static java.util.stream.Collectors.toCollection;
+
 public class EventHandler
 {
 
     Minecraft mc = Minecraft.getMinecraft();
     private boolean initialized = false;
 
-    public boolean onPacket(Object packet, Connection.Side side) {
-        boolean suc = true;
-        for (Module module : Main.moduleManager.getModuleList()) {
-            if (!module.isToggled() || mc.world == null) {
-                continue;
-            }
-            suc &= module.onPacket(packet, side);
-        }
-        return suc;
+    public ArrayList<Module> enableModule(){
+        return Main.moduleManager.getModuleList().stream().filter(Module::isToggled).collect(toCollection(ArrayList::new));
     }
-
 
     @SubscribeEvent
     public void onClientTick(TickEvent.ClientTickEvent event) {
