@@ -13,8 +13,10 @@ import me.nrules.module.modules.misc.*;
 import me.nrules.module.modules.movement.*;
 import me.nrules.module.modules.player.*;
 import me.nrules.module.modules.render.*;
+import net.minecraft.client.Minecraft;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ModuleManager
@@ -22,7 +24,7 @@ public class ModuleManager
 
     public static ArrayList<Module> modules;
 
-    public static Module getModule(Class<?> moduleClass) {
+    public static Module getModule(Class moduleClass) {
         for (Module module : modules) {
             if (module.getClass() != moduleClass) {
                 continue;
@@ -36,8 +38,8 @@ public class ModuleManager
     {
 
 
-        (modules = new ArrayList<>()).clear();
-
+        (modules = new ArrayList<Module>()).clear();
+        
         //COMBAT
         if (Main.hacks()) {
             modules.add(new AutoCrystal());
@@ -108,7 +110,7 @@ public class ModuleManager
 
     public Module getModule(String name)
     {
-        for (Module m : modules)
+        for (Module m : this.modules)
         {
             if (m.getName().equalsIgnoreCase(name))
             {
@@ -124,8 +126,8 @@ public class ModuleManager
 
     public ArrayList<Module> getModulesInCategory(Category categoryIn)
     {
-        ArrayList<Module> mods = new ArrayList<>();
-            for(Module m : modules)
+        ArrayList<Module> mods = new ArrayList<Module>();
+            for(Module m : this.modules)
             {
                 if(m.getCategory() == categoryIn)
                     mods.add(m);
@@ -135,14 +137,14 @@ public class ModuleManager
 
     public ArrayList<Module> getModuleList()
     {
-        return modules;
+        return this.modules;
     }
 
     public static List<Module> getModulesByCategory(Category c)
     {
         List<Module> modules = new ArrayList<Module>();
 
-        for (Module m : ModuleManager.modules)
+        for (Module m : Main.moduleManager.modules)
         {
             if (m.getCategory() == c)
                 modules.add(m);
