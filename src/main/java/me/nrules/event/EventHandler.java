@@ -11,13 +11,13 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-public class EventHandler
-{
+
+public class EventHandler {
 //
 //    Minecraft mc = Minecraft.getMinecraft();
 //    private boolean initialized = false;
 
-    public List<Module> enableModule(){
+    public List<Module> enableModule() {
         return Main.moduleManager.getModuleList().stream().filter(Module::isToggled).collect(toList());
     }
 
@@ -38,9 +38,8 @@ public class EventHandler
 //    }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void logIn(FMLNetworkEvent.ClientConnectedToServerEvent e) {
+    public void
+    logIn(FMLNetworkEvent.ClientConnectedToServerEvent e) {
         new ConnectionHandler(this, (NetHandlerPlayClient) e.getHandler());
     }
-
-
 }
